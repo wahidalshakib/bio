@@ -1,95 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wahidul Alam - Personal Website</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- Header / Hero Section -->
-  <header>
-    <div class="container">
-      <img src="images/Wahid.jpg.jpg" alt="Wahidul Alam" class="profile-img">
-      <h1>Wahidul Alam</h1>
-      <p>Student | Interested in Autonomous Drones, ML, FPV Drones</p>
-      <div class="social">
-        <a href="https://wa.me/01846146025" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
-    </div>
-  </header>
+/* ===== Global Variables ===== */
+:root {
+  --primary: #7a1f34;
+  --light-bg: #f1f1f1;
+  --text-dark: #555;
+}
 
-  <!-- About / Bio -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Hello! I am Wahidul Alam, a passionate student exploring autonomous drones, machine learning, and FPV drones. I love creating projects that combine robotics and technology to solve real-world problems.</p>
-    </div>
-  </section>
+/* ===== Container ===== */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 0;
+}
 
-  <!-- Projects / Interests -->
-  <section id="projects">
-    <div class="container">
-      <h2>Interests / Projects</h2>
-      <ul>
-        <li>Autonomous Drones</li>
-        <li>Machine Learning Projects</li>
-        <li>FPV Drones</li>
-      </ul>
-    </div>
-  </section>
+/* ===== Header / Hero ===== */
+header {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: left;       /* Left align profile */
+  padding-left: 40px;     /* Space from left edge */
+}
 
-  <!-- Contact / Chat -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p>Or chat with me via WhatsApp or live chat below!</p>
-    </div>
-  </section>
+header .profile-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: block;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Wahidul Alam. All rights reserved.</p>
-  </footer>
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
 
-  <!-- Live Chat Widget (Tawk.to Free) -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/64bff0dca4c2f43e2f7b1234/1h7abcxyz'; // Replace with your Tawk.to widget ID
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+header p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
 
-  <script src="script.js"></script>
+/* ===== Social Buttons ===== */
+header .social a {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 10px 20px;
+  color: var(--primary);
+  background-color: #ffffff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/696e6013270e04197b207c1e/1jfbiejfa';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+header .social a:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
 
-</body>
-</html>
+/* ===== Sections ===== */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+section p,
+section li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* ===== Projects ===== */
+#projects ul {
+  list-style: none;
+}
+
+#projects ul li {
+  background-color: var(--light-bg);
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+/* ===== Contact Form ===== */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact input,
+#contact textarea {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#contact button {
+  padding: 15px;
+  border: none;
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
