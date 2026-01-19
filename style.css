@@ -141,3 +141,30 @@ footer {
 .whatsapp-float i {
   line-height: 60px;
 }
+/* FORCE PRIMARY COLOR */
+* {
+  --blue: #7a1f34 !important;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #7a1f34 !important;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+.btn {
+  background-color: #7a1f34 !important;
+  border-color: #7a1f34 !important;
+  color: #ffffff !important;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float,
+.whatsapp-float i {
+  background-color: #7a1f34 !important;
+  color: #ffffff !important;
+}
